@@ -16,14 +16,14 @@ const workItems = [];
 
 app.get("/", function (req, res) {
 
-    let day = date.getDate();
+    const day = date.getDate();
 
     res.render("list", {listTitle: day, newListItems: items});
 
 });
 
 app.post("/", function (req,res) {
-    let item = req.body.newItem;
+    const item = req.body.newItem;
 
     if(req.body.list === "work"){
         workItems.push(item);
